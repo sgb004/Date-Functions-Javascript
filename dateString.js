@@ -7,9 +7,11 @@ function dateString( date ){
 	date = date.getTime();
 
 	timeRemaining = actualDate - date;
+	timeRemaining = parseInt(timeRemaining / 60000);
 
-	if( timeRemaining <  3600000){
-		timeRemaining = parseInt(timeRemaining / 60000);
+	if( timeRemaining == 0){
+		str = 'Hace un momento';
+	}else if( timeRemaining <  3600000){
 		str = 'Hace '+timeRemaining+' min';
 	}else{
 		var actualMins = actualDate / 3600000;

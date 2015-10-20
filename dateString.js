@@ -11,7 +11,7 @@ function dateString( date ){
 
 	if( timeRemaining == 0){
 		str = 'Hace un momento';
-	}else if( timeRemaining <  60){
+	}else if( timeRemaining < 60){
 		str = 'Hace '+timeRemaining+' min';
 	}else{
 		var actualMins = actualDate / 3600000;
